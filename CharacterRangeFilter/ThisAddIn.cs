@@ -49,7 +49,17 @@ namespace CharacterRangeFilter
             }
 
             string title = mail.Subject;
+            return HasChineseCharacters2More(title);
+        }
+
+        public static bool HasChineseCharacters2More(string title)
+        {
             int count = 0;
+
+            if (string.IsNullOrEmpty(title) == true)
+            {
+                return false;
+            }
 
             // https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C_%EB%B8%94%EB%A1%9D
             foreach (char ch in title)
