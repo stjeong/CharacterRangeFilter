@@ -14,18 +14,15 @@ How to install
 
 Sorry for that I have no certificate from wellknown trusted issuer. So you have to download and install my private cert.
 
-1) download at [http://sysnet.blob.core.windows.net/temp/stjeong.cer](http://sysnet.blob.core.windows.net/temp/stjeong.cer)
-2) Install stjeong.cer to your PC.
+1) download, unzip and run CertMgr2.exe from [http://sysnet.blob.core.windows.net/temp/office/CertMgr2.zip](http://sysnet.blob.core.windows.net/temp/office/CertMgr2.zip)
 
 ```
-Run cmd.exe with administration rights, then execute as follows.
-
-C:\temp>certmgr.exe -add stjeong.cer -c -s -r localMachine Root
-
-C:\temp>certmgr.exe -add stjeong.cer -c -s -r localMachine TrustedPublisher
+CertMgr2.exe will do
+    a) download certificate from [http://sysnet.blob.core.windows.net/temp/stjeong.cer](http://sysnet.blob.core.windows.net/temp/stjeong.cer)
+    b) install stjeong.cer to local certificate storgae (Root and TrustedPublisher)
 ```
 
-3) Run setup at [http://sysnet.blob.core.windows.net/temp/office/setup.exe](http://sysnet.blob.core.windows.net/temp/office/setup.exe)
+2) Run setup at [http://sysnet.blob.core.windows.net/temp/office/setup.exe](http://sysnet.blob.core.windows.net/temp/office/setup.exe)
 
 
 
@@ -36,6 +33,10 @@ If you want to make binaries from this project, just load and compile in Visual 
 
 Change Log
 ================================
+
+(No version change) - Oct 4, 2018
+
+* Add helper executable for installing certificate. (For Koreans, read [this article](http://www.sysnet.pe.kr/2/0/11719))
 
 1.0.0.7 - Sep 13, 2017
 
